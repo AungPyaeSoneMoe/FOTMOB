@@ -200,7 +200,7 @@ class _MatchesState extends State<Matches> {
       child: Scaffold(
         drawer: const NDrawer(),
         drawerScrimColor: Colors.grey,
-        drawerEdgeDragWidth: 200,
+        drawerEdgeDragWidth: 220,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,

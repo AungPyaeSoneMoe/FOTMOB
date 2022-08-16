@@ -38,9 +38,9 @@ class _MyAppState extends State<MyApp> {
 
       //   return null;
       // }
-      // home: AllCompetitions(),
+     
       home: Matches(),
-      // home: Home(),
+    
     );
   }
 }

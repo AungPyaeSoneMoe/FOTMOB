@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fotmob">
+
    <application
         android:label="fotmob"
         android:name="${applicationName}"

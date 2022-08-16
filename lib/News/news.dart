@@ -8,6 +8,10 @@ class News extends StatefulWidget {
 }
 
 class _NewsState extends State<News> {
+  List list = [
+    'https://th.bing.com/th/id/OIP.OZ3Khm9vWqeX4PrE4OIhGAHaHa?pid=ImgDet&rs=1'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -41,10 +45,41 @@ class _NewsState extends State<News> {
         ),
         body: TabBarView(
           children: [
-            Center(child: Text('H')),
-            Center(child: Text('e')),
-            Center(child: Text('e')),
-            Center(child: Text('o')),
+            ListView.builder(
+              itemBuilder: ((context, index) {
+                // ignore: avoid_unnecessary_containers
+                return Card(
+                  child: Image.network(
+                    'https://th.bing.com/th/id/R.4650d36f344fee91eec4e7875b3649c1?rik=%2bjPC21FZ9ren8A&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f429371-fifa-18-xbox-one-front-cover.jpg&ehk=5QvjIqgy6J%2b9RH7sL2og43PQnFxFEDn85lXU6kZ0Tz8%3d&risl=&pid=ImgRaw&r=0',
+                  ),
+                );
+              }),
+            ),
+            ListView.builder(
+              itemBuilder: ((context, index) {
+                return ListTile(
+                    title: Image.network(
+                        'https://th.bing.com/th/id/R.4650d36f344fee91eec4e7875b3649c1?rik=%2bjPC21FZ9ren8A&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f429371-fifa-18-xbox-one-front-cover.jpg&ehk=5QvjIqgy6J%2b9RH7sL2og43PQnFxFEDn85lXU6kZ0Tz8%3d&risl=&pid=ImgRaw&r=0'));
+              }),
+            ),
+            ListView.builder(
+              itemBuilder: ((context, index) {
+                return Card(
+                  child: Image.network(
+                    'https://th.bing.com/th/id/R.4650d36f344fee91eec4e7875b3649c1?rik=%2bjPC21FZ9ren8A&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f429371-fifa-18-xbox-one-front-cover.jpg&ehk=5QvjIqgy6J%2b9RH7sL2og43PQnFxFEDn85lXU6kZ0Tz8%3d&risl=&pid=ImgRaw&r=0',
+                  ),
+                );
+              }),
+            ),
+            ListView.builder(
+              itemBuilder: ((context, index) {
+                return Card(
+                  child: Image.network(
+                    'https://th.bing.com/th/id/R.4650d36f344fee91eec4e7875b3649c1?rik=%2bjPC21FZ9ren8A&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f429371-fifa-18-xbox-one-front-cover.jpg&ehk=5QvjIqgy6J%2b9RH7sL2og43PQnFxFEDn85lXU6kZ0Tz8%3d&risl=&pid=ImgRaw&r=0',
+                  ),
+                );
+              }),
+            ),
           ],
         ),
       ),

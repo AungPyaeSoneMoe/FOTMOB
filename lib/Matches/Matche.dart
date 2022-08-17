@@ -202,7 +202,7 @@ class _MatchesState extends State<Matches> {
         drawerScrimColor: Colors.grey,
         drawerEdgeDragWidth: 220,
         appBar: AppBar(
-          elevation: 0,
+          elevation: 0.5,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           title: const Text('FOTMAB'),
@@ -230,19 +230,22 @@ class _MatchesState extends State<Matches> {
                 icon: const Icon(Icons.more_vert))
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListView(
-            children: [
-              item('Australia - Australia Cup - Round of 16'),
-              item('Chapions League Qualification'),
-              item('FA Cup'),
-              item('Laliga'),
-              item('Span'),
-              item('Euora'),
-              item('Carlin'),
-              item('France'),
-            ],
+        body: Container(
+          color: Colors.grey.shade300,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListView(
+              children: [
+                item('Australia - Australia Cup - Round of 16'),
+                item('Chapions League Qualification'),
+                item('FA Cup'),
+                item('Laliga'),
+                item('Span'),
+                item('Euora'),
+                item('Carlin'),
+                item('France'),
+              ],
+            ),
           ),
         ),
       ),
@@ -256,18 +259,13 @@ class NDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      shape: const RoundedRectangleBorder(
-        // ignore: unnecessary_const
-        borderRadius: const BorderRadius.only(
-          topRight: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-        ),
-      ),
-      width: MediaQuery.of(context).size.width * 0.5,
       child: SingleChildScrollView(
         child: Column(
           children: [
             header(context),
+            const Divider(
+              height: 1,
+            ),
             draweritems(context),
           ],
         ),
@@ -276,7 +274,12 @@ class NDrawer extends StatelessWidget {
   }
 
   Widget header(BuildContext context) => Container(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+        alignment: Alignment.centerLeft,
+        height: 200,
+        padding: const EdgeInsets.only(left: 25),
+        child: const CircleAvatar(
+          radius: 50,
+        ),
       );
   Widget draweritems(BuildContext context) => Container(
         padding: const EdgeInsets.all(15),
@@ -323,6 +326,7 @@ class NDrawer extends StatelessWidget {
                 title: const Text('More'),
                 onTap: () {
                   Navigator.pop(context);
+
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: ((context) => More()),

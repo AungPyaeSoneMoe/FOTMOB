@@ -8,17 +8,13 @@ class News extends StatefulWidget {
 }
 
 class _NewsState extends State<News> {
-  List list = [
-    'https://th.bing.com/th/id/OIP.OZ3Khm9vWqeX4PrE4OIhGAHaHa?pid=ImgDet&rs=1'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          elevation: 0,
+          elevation: 0.5,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           title: Text('News'),

@@ -184,37 +184,41 @@ class _AllCompetitionsState extends State<League> {
         foregroundColor: Colors.black,
         title: const Text('League'),
       ),
-      body: ListView(
-        shrinkWrap: true,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Card(
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: TextFormField(
-                cursorColor: Colors.black,
-                controller: controller,
-                decoration: const InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white10,
-                  border: InputBorder.none,
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.grey,
+      body: Container(
+        height: double.infinity,
+        color: Colors.grey.shade300,
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  controller: controller,
+                  decoration: const InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white10,
+                    border: InputBorder.none,
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    ),
+                    hintText: 'Find Leagues',
                   ),
-                  hintText: 'Find Leagues',
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: card(),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: card(),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -247,25 +251,4 @@ List<String> list = [
   'x',
   'y',
   'z'
-];
-
-var data = [
-  {
-    "icon": '111',
-    "title": "aa",
-    "cups": [
-      {
-        "icon": 'aa',
-        'title': '11',
-      }
-    ]
-  },
-  {
-    "icon": '111',
-    "title": "aa",
-  },
-  {
-    "icon": '111',
-    "title": "aa",
-  },
 ];
